@@ -1,0 +1,223 @@
+@font-face{
+    font-family: myFont;
+    src:url(pokemon1.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: myFont;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    0%{
+        background-position: 0 50%;
+    }
+}
+
+.header, .about, .characters, .skills{
+    background: linear-gradient(-45deg, #ffffed, #ffffd4, #ffffba, #ffffa1);
+    background-size: 400% 400%;
+    width: 100%;
+    height: 100vh;
+    animation: animate 15s ease infinite;
+    z-index: 1;
+}
+
+.logo{
+    position: fixed;
+    margin-left: -20px;
+    margin-top: -40px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.header ul{
+    height: 50px;
+    right: 10px;
+    position: fixed;
+    z-index: 100;
+}
+
+.header ul li{
+    display: inline-block;
+    padding: 60px 15px;
+}
+
+.header ul li a{
+    font-family: myFont;
+    font-size: 40px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(-45deg, #ff00cc, #00d2ff, #3cff00);
+    animation: colorful 2s ease-in-out infinite alternate, colorChange 5s ease-in-out infinite alternate;
+}
+
+@keyframes colorful{
+    0%{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    100%{
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes colorChange{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.header ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+
+.home h1{
+    position: absolute;
+    font-size: 50px;
+    margin-top: -630px;
+    margin-left: 750px;
+    text-decoration: underline rgb(12, 162, 221);
+}
+
+.home p{
+    position: absolute;
+    width: 40%;
+    font-size: 26px;
+    margin-top: -550px;
+    margin-left: 820px;
+    text-align: justify;
+}
+
+.home img{
+    position: absolute;
+    height: 250px;
+    margin-top: -520px;
+    margin-left: 50px;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+    gap: 1em;
+    width: 1400px;
+    height: 800px auto;
+    transition: all 400ms;
+    margin-left: 50px;
+}
+
+.box{
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.box:after{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    font-size: 40px;
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 200ms;
+    
+}
+
+.container:hover .box{
+    filter: grayscale(100%) opacity(30%);
+}
+
+.box:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.container .box:hover{
+    filter: grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover){
+    grid-template-columns: 2.8fr .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.container:has(.box-2:hover){
+    grid-template-columns: .5fr 2.55fr .5fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.container:has(.box-3:hover){
+    grid-template-columns: .5fr .5fr 2.9fr .5fr .5fr .5fr .5fr .5fr;
+}
+
+.container:has(.box-4:hover){
+    grid-template-columns: .5fr .5fr .5fr 3.15fr .5fr .5fr .5fr .5fr;
+}
+
+.container:has(.box-5:hover){
+    grid-template-columns: .5fr .5fr .5fr .5fr 3fr .5fr .5fr .5fr;
+}
+
+.container:has(.box-6:hover){
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr 3.1fr .5fr .5fr;
+}
+
+.container:has(.box-7:hover){
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr 1.93fr .5fr;
+}
+
+.container:has(.box-8:hover){
+    grid-template-columns: .5fr .5fr .5fr .5fr .5fr .5fr .5fr 2.8fr;
+}
+
+.about h1{
+    font-size: 50px;
+    text-decoration: underline pink;
+}
+
+.about p{
+    width: 40%;
+    font-size: 30px;
+    text-align: justify;
+}
+
+
+.skills h1{
+    font-size: 50px;
+    text-decoration: underline pink;
+}
+
+.skills p{
+    width: 40%;
+    font-size: 30px;
+    text-align: justify;
+}
