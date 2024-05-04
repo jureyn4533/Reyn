@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url("back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    gap:150px;
+    margin-left: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container img{
+    font-family: sans-serif;
+    margin-left: -540px;
+    margin-bottom: 250px;
+    margin-top: 130px;
+}
+.container h1{
+    margin-bottom: 150px;
+    margin-top:450px;
+    margin-left: -465px;
+}
+.box{
+    
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+ 
+    flex-direction: column;
+    padding: 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.box img{
+    width:55px;
+    margin-left: 440px;
+    margin-top: -24px;
+    margin-right: -90px;
+}
+
+.form-box{
+    width: 450px;
+    margin: 0px 10px;
+    margin-top: -290px;
+}
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.form-box form .field .input,.submission{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.form-box .field .btn{
+    height: 35px;
+    background-color: rgb(180, 180, 180);
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+}
+
+.form-box .field .btn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color:black;
+    text-decoration: underline;
+}
+
+.message {
+    width: 400px;
+    text-align: center;
+    background: rgb(180, 180, 180);
+    padding: 15px 0px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+.btn{
+    height: 35px;
+    background-color: rgb(180, 180, 180);
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    transition: 0.2s ease-in;
+    font-size: 15px;
+}
+
+.password-input {
+    position: relative;
+    display: inline-block;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
